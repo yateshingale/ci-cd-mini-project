@@ -6,6 +6,9 @@ services:
     ports:
       - "${APP_PORT}:5000"   # Uses .env variable
     restart: always
+    environment:
+      - APP_ENV=${APP_ENV}
+      - APP_SECRET=${APP_SECRET}
     env_file:
       - .env
     healthcheck:
